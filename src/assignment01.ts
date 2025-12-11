@@ -22,3 +22,18 @@ function deleteStudent(name: string): void {
     console.log(`Student not found: ${name}`);
   }
 }
+function listStudents(): void {
+  console.log("All Students:");
+  students.forEach((s, i) => {
+    console.log(`${i + 1}. ${s.name} | Age: ${s.age} | Grade: ${s.grade}`);
+  });
+}
+addStudent("John", 18, "A");
+addStudent("Emma", 17, "B");
+addStudent("Liam", 19, "A");
+
+listStudents();
+
+deleteStudent("Emma");
+
+listStudents();
